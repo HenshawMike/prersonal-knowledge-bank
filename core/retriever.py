@@ -11,6 +11,7 @@ from core.embeddings import CachedHuggingFaceEmbeddings
 
 LlamaSettings.embed_model = CachedHuggingFaceEmbeddings(
             model_name="sentence-transformers/all-MiniLM-L12-v2",
+            api_base="https://router.huggingface.co",
             api_key=settings.HF_TOKEN)
 
 LlamaSettings.llm = OpenAI(api_key=settings.OPENROUTER_API_KEY,

@@ -12,7 +12,7 @@ llm = OpenAI(
     temperature=0.7,
      additional_kwargs={
         "headers": {
-            "HTTP-Referer": "http://localhost:8501/",  # Optional, for tracking
+            "HTTP-Referer": "https://prersonal-knowledge-bank.streamlit.app/",  # Optional, for tracking
             "X-Title": "Personal Knowledge OS",       # Optional, for tracking
         },
     }
