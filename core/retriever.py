@@ -10,7 +10,7 @@ from config.settings import settings
     
 
 LlamaSettings.embed_model = HuggingFaceInferenceAPIEmbeddings(
-            model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
+            model_name="BAAI/bge-small-en-v1.5",
             api_base="https://api-inference.huggingface.co",
             api_key=settings.HF_TOKEN)
 
