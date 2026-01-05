@@ -79,9 +79,14 @@ graph TD
    ```
 
 4. Set up environment variables:
-   Create a `.env` file in the root directory with your configuration:
+   Create a `serets.toml'  file in the root directory with your configuration:
    ```
-   OPENAI_API_KEY=your_openai_api_key
+   [openrouter]
+   api_key = "sk-or-v1-xxxxxxxxxxxxx"
+   model_name = "openrouter/model_company/model_name"
+
+   [huggingface]
+   hf_token = "hf_xxxxxxxxxxxxxxxx"
    ```
 
 ## 🚀 Usage
@@ -137,6 +142,8 @@ Also to the open-source AI community — LlamaIndex, Streamlit, and all builders
 ## 🎮 Try It!
 
 👉 **[Launch App](https://your-app.streamlit.app)**
+ 
+ i couldnt deploy  it because of how huggingface does allow severless models work with their updated policies and how incompactable the new update is with llama_index.
 
 Upload. Chat. Discover what your brain remembers.
 
