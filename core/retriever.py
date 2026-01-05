@@ -4,14 +4,13 @@ from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.huggingface import HuggingFaceInferenceAPIEmbeddings    
 from llama_index.core import Settings as LlamaSettings
 from config.settings import settings
-from core.embeddings import CachedHuggingFaceEmbeddings
+
 
 
     
 
-LlamaSettings.embed_model = CachedHuggingFaceEmbeddings(
+LlamaSettings.embed_model = HuggingFaceInferenceAPIEmbeddings(
             model_name="sentence-transformers/all-MiniLM-L12-v2",
-            api_base="https://router.huggingface.co",
             api_key=settings.HF_TOKEN)
 
 LlamaSettings.llm = OpenAI(api_key=settings.OPENROUTER_API_KEY,

@@ -9,5 +9,5 @@ __pycache__/
 .Python
 env/
 storage/
-#data/
+data/chromaDB/
 .streamlit/
