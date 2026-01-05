@@ -15,6 +15,8 @@ class Settings:
     )
 
     HF_TOKEN=st.secrets.get("hf_token")
+    if not HF_TOKEN:
+        raise ValueError("Hugging Face token (HF_TOKEN) is required in Streamlit secrets")
 
     BASE_DIR=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     UPLOAD_DIR=os.path.join(BASE_DIR, "data", "uploads")

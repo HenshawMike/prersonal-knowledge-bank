@@ -78,11 +78,18 @@ graph TD
    pip install -r requirements.txt
    ```
 
-4. Set up environment variables:
-   Create a `.env` file in the root directory with your configuration:
+4. Set up Streamlit secrets:
+   For local development, create a file at `.streamlit/secrets.toml` with the following content:
+   ```toml
+   # .streamlit/secrets.toml
+   hf_token = "YOUR_HUGGING_FACE_TOKEN"
+
+   [openrouter]
+   api_key = "YOUR_OPENROUTER_API_KEY"
+   # Optional: specify a different model
+   # model_name = "meta-llama/llama-3-8b-instruct"
    ```
-   OPENAI_API_KEY=your_openai_api_key
-   ```
+   Replace `YOUR_HUGGING_FACE_TOKEN` and `YOUR_OPENROUTER_API_KEY` with your actual API keys. When deploying to Streamlit Community Cloud, you will need to set these secrets in your application's settings.
 
 ## 🚀 Usage
 
